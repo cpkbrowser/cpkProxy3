@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
 		});
 	}
 	
-	var x = 'http://www.' + source + '.' + extension + srchKey;
+	var x = 'http://' + (String(www) == 'true' ? 'www.' : '') + source + '.' + extension + srchKey;
 	//console.log(x);
 	download(x, function(data) {
 		var rtrn = '<html>';

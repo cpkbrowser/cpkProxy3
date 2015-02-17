@@ -33,7 +33,7 @@ router.get('/', function(req, res) {
 	}
 	
 	var x = 'http://' + (String(www) == 'true' ? 'www.' : '') + source + '.' + extension + srchKey;
-	//console.log(x);
+	console.log(x);
 	download(x, function(data) {
 		var rtrn = '<html>';
 		var $ = cheerio.load(data);
